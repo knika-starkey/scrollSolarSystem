@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("./images/space.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+
+      ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px; /* The height is only seen on horizontal scrolling */
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: rgb(12, 12, 14);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: slategray;
+      }
+      .start {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+      }
+      .middlepos {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .fade {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./images/solar.png" alt="" height="500" id="main" class="start" />
+    <!-- <img src="./images/space.jpg" class="bg" alt="" /> -->
+    <canvas
+      id="myCanvas"
+      width="0"
+      height="45073"
+      style="border: 1px solid #d3d3d3 hidden"
+    >
+      Your browser does not support the HTML5 canvas tag.</canvas
+    >
+    <script src="./script.js"></script>
+  </body>
+</html>
