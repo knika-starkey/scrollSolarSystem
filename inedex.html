@@ -85,6 +85,14 @@
         border-radius: 5px;
         text-align: center;
       }
+      .rad {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+      }
     </style>
   </head>
   <body>
@@ -93,6 +101,19 @@
     <div class="right" id="infoText"></div>
     <div class="bottom-center" id="location"></div>
     <button id="home" class="btn">Завершити експедицію</button>
+    <form action="" name="fastMenu" class="rad">
+      <p>Швидка панель</p>
+      <input type="radio" name="fast" value="solarSystem" />Сонячна система<br />
+      <input type="radio" name="fast" value="sun" />Сонце<br />
+      <input type="radio" name="fast" value="mercury" />Меркурій<br />
+      <input type="radio" name="fast" value="venus" />Венера<br />
+      <input type="radio" name="fast" value="earth" />Земля<br />
+      <input type="radio" name="fast" value="mars" />Марс<br />
+      <input type="radio" name="fast" value="jupiter" />Юпітер<br />
+      <input type="radio" name="fast" value="saturn" />Сатурн<br />
+      <input type="radio" name="fast" value="uranus" />Уран<br />
+      <input type="radio" name="fast" value="neptune" />Нептун<br />
+    </form>
     <canvas
       id="myCanvas"
       width="0"
