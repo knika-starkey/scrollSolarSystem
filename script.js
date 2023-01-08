@@ -124,17 +124,17 @@ window.onscroll = function () {
 
 function check(aPlanet, bPlanet, isLast) {
   if (
-    document.documentElement.scrollTop < bPlanet.distance - 50 &&
+    document.documentElement.scrollTop < bPlanet.distance - 100 &&
     document.documentElement.scrollTop >= aPlanet.distance
   ) {
     changeImg(aPlanet);
   }
   if (
-    document.documentElement.scrollTop >= bPlanet.distance - 50 &&
+    document.documentElement.scrollTop >= bPlanet.distance - 100 &&
     document.documentElement.scrollTop <= bPlanet.distance
   ) {
-    rightText.classList.add("fade");
-    leftText.classList.add("fade");
+    rightText.classList.add("goRight");
+    leftText.classList.add("goLeft");
     mainPl.classList.add("fade");
   }
   if (isLast && document.documentElement.scrollTop > bPlanet.distance) {
@@ -146,8 +146,8 @@ function changeImg(planet) {
   mainPl.src = planet.img;
   mainPl.style.height = planet.size + "px";
   leftText.innerHTML = planet.characteristics;
-  leftText.classList.remove("fade");
+  leftText.classList.remove("goLeft");
   rightText.innerHTML = planet.info;
-  rightText.classList.remove("fade");
+  rightText.classList.remove("goRight");
   mainPl.classList.remove("fade");
 }
