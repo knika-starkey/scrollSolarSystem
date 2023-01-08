@@ -106,12 +106,20 @@ let solarPlanets = [
 let mainPl = document.getElementById("main");
 let leftText = document.getElementById("charText");
 let rightText = document.getElementById("infoText");
+let locationDiv = document.getElementById("location");
+let homeBuutton = document.getElementById("home");
+homeBuutton.addEventListener("click", () => {
+  window.scrollTo(0, earth.distance);
+});
 // mainPl.src = sun.img;
 // mainPl.style.height = sun.size + "px";
 for (let i = 0; i < solarPlanets.length; i++) {
   console.log(solarPlanets[i]);
 }
 window.onscroll = function () {
+  locationDiv.innerHTML = `Ми вже пролетіли ${
+    window.pageYOffset * 100000
+  } кілометрів!`;
   for (let i = 0; i < solarPlanets.length - 1; i++) {
     check(solarPlanets[i], solarPlanets[i + 1], false);
   }
@@ -124,15 +132,16 @@ window.onscroll = function () {
 
 function check(aPlanet, bPlanet, isLast) {
   if (
-    document.documentElement.scrollTop < bPlanet.distance - 100 &&
+    document.documentElement.scrollTop < bPlanet.distance - 70 &&
     document.documentElement.scrollTop >= aPlanet.distance
   ) {
     changeImg(aPlanet);
   }
   if (
-    document.documentElement.scrollTop >= bPlanet.distance - 100 &&
+    document.documentElement.scrollTop >= bPlanet.distance - 70 &&
     document.documentElement.scrollTop <= bPlanet.distance
   ) {
+    locationDiv.innerHTML = "Підлітаємо до наступної!!";
     rightText.classList.add("goRight");
     leftText.classList.add("goLeft");
     mainPl.classList.add("fade");
