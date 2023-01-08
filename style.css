@@ -1,0 +1,87 @@
+body {
+    background-image: url("./images/space.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+
+  /*  */
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(12, 12, 14);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-image: url("./images/rocket.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20px;
+  }
+  .start {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+  }
+  .middlepos {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fade {
+    opacity: 0;
+  }
+
+  div {
+    width: 400px;
+    overflow-wrap: break-word;
+    transition: all 0.5s;
+    position: fixed;
+    bottom: 50%;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    padding: 20px;
+  }
+  .left {
+    left: 0px;
+  }
+  .goLeft {
+    left: -500px;
+  }
+  .right {
+    right: 0px;
+  }
+  .goRight {
+    right: -500px;
+  }
+  .bottom-center {
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .btn {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgb(75, 75, 87);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .rad {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+  }
