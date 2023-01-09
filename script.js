@@ -108,9 +108,36 @@ let leftText = document.getElementById("charText");
 let rightText = document.getElementById("infoText");
 let locationDiv = document.getElementById("location");
 let homeBuutton = document.getElementById("home");
+let backButton = document.getElementById("getBack");
 let fastM = document.forms.fastMenu;
 for (let i = 0; i < fastM.length; i++) {
   fastM[i].addEventListener("change", goTo);
+}
+mainPl.addEventListener("click", showSurface);
+backButton.addEventListener("click", backToNormal);
+function backToNormal() {
+  backButton.classList.add("fade");
+  document.body.style.backgroundImage = `url(./images/space.jpg)`;
+  rightText.classList.remove("goRight");
+  leftText.classList.remove("goLeft");
+  mainPl.classList.remove("fade");
+  homeBuutton.classList.remove("fade");
+  locationDiv.classList.remove("fade");
+  fastM.classList.remove("fade");
+  document.body.classList.remove("stop-scrolling");
+}
+function showSurface() {
+  let planetImg = mainPl.src.replace(/^.*[\\\/]/, "").replace(".png", "");
+  console.log(planetImg);
+  document.body.style.backgroundImage = `url(./images/${planetImg}-surface.jpg)`;
+  rightText.classList.add("goRight");
+  leftText.classList.add("goLeft");
+  mainPl.classList.add("fade");
+  homeBuutton.classList.add("fade");
+  locationDiv.classList.add("fade");
+  backButton.classList.remove("fade");
+  fastM.classList.add("fade");
+  document.body.classList.add("stop-scrolling");
 }
 function goTo(event) {
   for (let i = 0; i < solarPlanets.length; i++) {
@@ -122,8 +149,6 @@ function goTo(event) {
 homeBuutton.addEventListener("click", () => {
   window.scrollTo(0, earth.distance + 2);
 });
-// mainPl.src = sun.img;
-// mainPl.style.height = sun.size + "px";
 for (let i = 0; i < solarPlanets.length; i++) {
   console.log(solarPlanets[i]);
 }

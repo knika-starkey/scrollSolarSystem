@@ -4,7 +4,10 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
   }
-
+  .stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
   /*  */
   ::-webkit-scrollbar {
     width: 20px;
@@ -64,10 +67,9 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .btn {
+  button{
     position: fixed;
-    bottom: 10px;
-    left: 10px;
+    
     background-color: rgb(75, 75, 87);
     color: white;
     font-size: 16px;
@@ -76,6 +78,15 @@ body {
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
+  }
+  .btn {
+    bottom: 10px;
+    left: 10px;
+  }
+  .btn-center{
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .rad {
     position: fixed;
