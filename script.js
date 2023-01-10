@@ -116,7 +116,7 @@ function getMore() {
   if (rightText.classList.contains("fade")) {
     moreInfo.innerText = "Більше";
   } else {
-    moreInfo.innerText = "Меньше";
+    moreInfo.innerText = "Менше";
   }
 }
 let fastM = document.forms.fastMenu;
