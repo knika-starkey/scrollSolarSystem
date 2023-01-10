@@ -118,6 +118,7 @@ backButton.addEventListener("click", backToNormal);
 function backToNormal() {
   backButton.classList.add("fade");
   document.body.style.backgroundImage = `url(./images/space.jpg)`;
+  homeBuutton.disanled = "true";
   rightText.classList.remove("goRight");
   leftText.classList.remove("goLeft");
   mainPl.classList.remove("fade");
@@ -130,6 +131,7 @@ function showSurface() {
   let planetImg = mainPl.src.replace(/^.*[\\\/]/, "").replace(".png", "");
   console.log(planetImg);
   document.body.style.backgroundImage = `url(./images/${planetImg}-surface.jpg)`;
+  homeBuutton.disanled = "false";
   rightText.classList.add("goRight");
   leftText.classList.add("goLeft");
   mainPl.classList.add("fade");

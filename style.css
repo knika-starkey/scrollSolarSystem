@@ -134,23 +134,25 @@ button {
     width: 93%;
   }
   .goLeft{
-    left: -100%;
+    left: -200%;
   }
-
   .right {
     top: initial;
     bottom: 5%;
     left: 0px;
     width: 70%;
   }
-
+.goRight{
+  right: initial;
+  left: -200%;
+}
   button {
     font-size: 13px;
   }
 }
 
 @media screen and (max-width: 607px) {
-.right{
-  width: 50%;
-}
+  .right{
+    width: 50%;
+  }
   }
