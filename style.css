@@ -133,13 +133,15 @@ button {
     left: 0px;
     width: 93%;
   }
+  .goLeft{
+    left: -100%;
+  }
 
   .right {
     top: initial;
     bottom: 5%;
     left: 0px;
     width: 70%;
-
   }
 
   button {
