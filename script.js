@@ -109,6 +109,16 @@ let rightText = document.getElementById("infoText");
 let locationDiv = document.getElementById("location");
 let homeBuutton = document.getElementById("home");
 let backButton = document.getElementById("getBack");
+let moreInfo = document.getElementById("infoShow");
+moreInfo.addEventListener("click", getMore);
+function getMore() {
+  rightText.classList.toggle("fade");
+  if (rightText.classList.contains("fade")) {
+    moreInfo.innerText = "Більше";
+  } else {
+    moreInfo.innerText = "Меньше";
+  }
+}
 let fastM = document.forms.fastMenu;
 for (let i = 0; i < fastM.length; i++) {
   fastM[i].addEventListener("change", goTo);
@@ -119,6 +129,7 @@ function backToNormal() {
   backButton.classList.add("fade");
   document.body.style.backgroundImage = `url(./images/space.jpg)`;
   homeBuutton.disanled = "true";
+  moreInfo.classList.remove("fade");
   rightText.classList.remove("goRight");
   leftText.classList.remove("goLeft");
   mainPl.classList.remove("fade");
@@ -129,9 +140,10 @@ function backToNormal() {
 }
 function showSurface() {
   let planetImg = mainPl.src.replace(/^.*[\\\/]/, "").replace(".png", "");
-  console.log(planetImg);
+  // console.log(planetImg);
   document.body.style.backgroundImage = `url(./images/${planetImg}-surface.jpg)`;
   homeBuutton.disanled = "false";
+  moreInfo.classList.add("fade");
   rightText.classList.add("goRight");
   leftText.classList.add("goLeft");
   mainPl.classList.add("fade");
@@ -151,9 +163,9 @@ function goTo(event) {
 homeBuutton.addEventListener("click", () => {
   window.scrollTo(0, earth.distance + 2);
 });
-for (let i = 0; i < solarPlanets.length; i++) {
-  console.log(solarPlanets[i]);
-}
+// for (let i = 0; i < solarPlanets.length; i++) {
+//   console.log(solarPlanets[i]);
+// }
 window.onscroll = function () {
   locationDiv.innerHTML = `Ми вже пролетіли ${
     window.pageYOffset * 100000
