@@ -167,4 +167,7 @@ button {
   .right{
     width: 50%;
   }
+  .btn-left{
+    bottom: 35%;
+  }
   }
