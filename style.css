@@ -168,6 +168,9 @@ button {
     width: 50%;
   }
   .btn-left{
-    bottom: 45%;
+    bottom: 50%;
+  }
+  .rad{
+    font-size: 14px;
   }
   }
