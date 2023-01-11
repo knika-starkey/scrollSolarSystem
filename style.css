@@ -163,11 +163,11 @@ button {
   }
 }
 
-@media screen and (max-width: 607px) {
+@media screen and (max-width: 768px) {
   .right{
     width: 50%;
   }
   .btn-left{
-    bottom: 35%;
+    bottom: 45%;
   }
   }
